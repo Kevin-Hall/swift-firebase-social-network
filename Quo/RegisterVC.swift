@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 9/20/17.
-//  Copyright © 2017 KAACK. All rights reserved.
+//  Copyright © 2017 Kevin Hall. All rights reserved.
 //
 
 import Foundation
@@ -24,9 +24,9 @@ class RegisterVC: UIViewController {
         if let email = emailField.text, let pwd = passwordField.text, let username = usernameField.text {
             Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                 if error != nil {
-                    print("KEV: Unable to authenticate with Firebase using email")
+                    print("Unable to auth with Firebase using email")
                 } else {
-                    print("KEV: Successfully authenticated with Firebase")
+                    print("Successfully auth with Firebase")
                     if let user = user {
                         let userData = ["provider": user.providerID,"email": email,"username": username,"password": pwd,"uid" : user.uid]
                         self.completeSignIn(user.uid, userData: userData)
@@ -41,11 +41,11 @@ class RegisterVC: UIViewController {
         DataService.ds.createFirebaseUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         
-        //let kw = KeychainWrapper()
-        //let keychainResult = KeychainWrapper.init(serviceName: id, accessGroup: KEY_UID)
+//        let kw = KeychainWrapper()
+//        let keychainResult = KeychainWrapper.init(serviceName: id, accessGroup: KEY_UID)
+//        let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         
-        //let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
-        print("KEV: Data saved to keychain \(keychainResult)")
+        print("Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeedAnim", sender: nil)
     }
     

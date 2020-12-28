@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 12/7/16.
-//  Copyright © 2016 KAACK. All rights reserved.
+//  Copyright © 2016 Kevin Hall. All rights reserved.
 //
 
 import Foundation
@@ -22,7 +22,7 @@ class UserVC: UIViewController, CAPSPageMenuDelegate {
         self.navigationController?.isNavigationBarHidden = true
 
         
-        
+        // initialize the tabbed pages
         setupPages()
         
         

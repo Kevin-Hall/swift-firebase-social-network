@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 11/29/16.
-//  Copyright © 2016 KAACK. All rights reserved.
+//  Copyright © 2016 Kevin Hall. All rights reserved.
 //
 
 import UIKit
@@ -39,7 +39,7 @@ class SignInVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey:KEY_UID){
-            print("KEV: ID found in keychain")
+            print("ID found in keychain")
             performSegue(withIdentifier: "goToFeed", sender: nil)
 
             //emailField.font =
@@ -57,7 +57,7 @@ class SignInVC: UIViewController {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("KEV: Unable to authenticate with Facebook - \(error)")
+                print("KEV: Unable to authenticate with Facebook - \(String(describing: error))")
             } else if result?.isCancelled == true {
                 print("KEV: User cancelled Facebook authentication")
             } else {
@@ -72,7 +72,7 @@ class SignInVC: UIViewController {
     func firebaseAuth(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("KEV: Unable to authenticate with Firebase - \(error)")
+                print("KEV: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("KEV: Successfully authenticated with Firebase")
             }
@@ -113,8 +113,8 @@ class SignInVC: UIViewController {
 
         //let kw = KeychainWrapper()
         //let keychainResult = KeychainWrapper.init(serviceName: id, accessGroup: KEY_UID)
-        
         //let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
+        
         print("KEV: Data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeedAnim", sender: nil)
     }

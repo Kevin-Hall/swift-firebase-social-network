@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 9/20/17.
-//  Copyright © 2017 KAACK. All rights reserved.
+//  Copyright © 2017 Kevin Hall. All rights reserved.
 //
 
 import UIKit

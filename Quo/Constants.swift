@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 12/6/16.
-//  Copyright © 2016 KAACK. All rights reserved.
+//  Copyright © 2016 Kevin Hall. All rights reserved.
 //
 
 import UIKit
@@ -22,13 +22,6 @@ let COLOR_BG = UIColor.black
 let COLOR_TEXT = UIColor.white
 
 let COLOR_TEXT_HALF_ALPHA = COLOR_TEXT.withAlphaComponent(0.5)
-
-
-
-
-
-
-
 
 
 let COLOR_NAV_RED = UIColor(red: 254/255, green: 40/255, blue: 81/255, alpha: 1)

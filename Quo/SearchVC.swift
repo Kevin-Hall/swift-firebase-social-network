@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 10/5/17.
-//  Copyright © 2017 KAACK. All rights reserved.
+//  Copyright © 2017 Kevin Hall. All rights reserved.
 //
 import Foundation
 import UIKit
@@ -17,10 +17,6 @@ class SearchVC: UITableViewController {
     var uid = [String]()
     var usernames = [String]()
     var photourls = [String]()
-    
-    
-    //let week = weekCycleContainer()
-    
     
     
     func retrieveUsers() {
@@ -53,14 +49,12 @@ class SearchVC: UITableViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         retrieveUsers()
         
         navigationItem.title = "Search"
-        
         tableView.separatorColor = COLOR_BG
         tableView.sectionHeaderHeight = 30
         
@@ -96,7 +90,6 @@ class SearchVC: UITableViewController {
         cell.imageView?.backgroundColor = UIColor.blue
         cell.imageView?.layer.cornerRadius = 2
         cell.backgroundColor = COLOR_BG
-        
         cell.requestImageView.downloadImage(from: self.photourls[indexPath.row])
         
         return cell

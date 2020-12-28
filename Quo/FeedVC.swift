@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 12/7/16.
-//  Copyright © 2016 KAACK. All rights reserved.
+//  Copyright © 2016 Kevin Hall. All rights reserved.
 //
 
 import Foundation
@@ -35,8 +35,6 @@ class FriendsFeedVC: UIViewController {
     var cviewb4 = UIButton()
     var cviewb5 = UIButton()
     var cviewb6 = UIButton()
-    
-    
     
     
     override func viewWillLayoutSubviews() {
@@ -336,22 +334,12 @@ class FriendsFeedVC: UIViewController {
         }, completion: { _ in
             //self.gridCollectionView.reloadData()
         })
-        
-        
-
-    
-        
     }
-    
-    
-    
-    
     
     @objc func showChangegrid() {
         
         if scrollImg.alpha == 1 {
-            
-            
+
             var angle =  CGFloat(Double.pi/2)
             
             if rotated {

@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 10/3/17.
-//  Copyright © 2017 KAACK. All rights reserved.
+//  Copyright © 2017 Kevin Hall. All rights reserved.
 //
 
 import UIKit
@@ -20,13 +20,7 @@ class CollectionHeaderView: UICollectionReusableView {
         textLabel = UILabel()
         
         super.init(frame: frame)
-        
-        
-        
-        
-
         self.addSubview(textLabel)
-        
         self.backgroundColor = COLOR_BG
         
         textLabel.font = UIFont(name: "Futura-Medium", size: 12)

@@ -3,7 +3,7 @@
 //  Quo
 //
 //  Created by Kevin Hall on 9/18/17.
-//  Copyright © 2017 KAACK. All rights reserved.
+//  Copyright © 2017 Kevin Hall. All rights reserved.
 //
 
 import Foundation
@@ -34,6 +34,5 @@ class DataService {
     func createFirebaseUser(uid: String, userData: Dictionary<String,String>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
-    
     
 }
